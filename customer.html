@@ -4,7 +4,7 @@
 
 <script>
 // Include the UserVoice JavaScript SDK (only needed once on a page)
-UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/xxoKrGd3Cq4dkM0uZnmaA.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/hylw0tKOIkXPFyUII1zoQ.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
 
 //
 // UserVoice Javascript SDK developer documentation:
@@ -17,7 +17,6 @@ UserVoice.push(['set', {
   trigger_color: 'white',
   trigger_background_color: 'rgba(46, 49, 51, 0.6)'
 }]);
-
 
 // Identify the user and pass traits
 // To enable, replace sample data with actual user traits and uncomment the line
@@ -38,10 +37,10 @@ UserVoice.push(['identify', {
 }]);
 
 // Add default trigger to the bottom-right corner of the window:
-UserVoice.push(['addTrigger', {mode: 'feedback', trigger_position: 'bottom-right' }]);
+UserVoice.push(['addTrigger', {mode: 'contact', trigger_position: 'bottom-right' }]);
 
 // Or, use your own custom trigger:
-//UserVoice.push(['addTrigger', '#id', { mode: 'feedback' }]);
+//UserVoice.push(['addTrigger', '#id', { mode: 'contact' }]);
 
 // Autoprompt for Satisfaction and SmartVote (only displayed under certain conditions)
 UserVoice.push(['autoprompt', {}]);
