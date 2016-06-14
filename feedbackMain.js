@@ -115,7 +115,7 @@ function initFeedackView() {
         var uv = document.createElement('script');
         uv.type = 'text/javascript';
         uv.async = true;
-        uv.src = feedbackDirPath + '/js/dwFeedbackSdk.js';
+        uv.src = feedbackDirPath + 'dwFeedbackSdk.js';
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(uv, s);
     })();
