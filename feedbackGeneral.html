@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Copyright 2016 Adobe Systems Incorporated.  All rights reserved. -->
+    <title>User Feedback</title>
+    <script type="text/javascript" src="../Shared/jQuery/jquery.min.js"></script>
+    <script type="text/javascript" src="../Shared/jQuery/Internationalization/jquery.i18n.properties-1.0.9.js"></script>
+    <script type="text/javascript" src="js/feedbackConstants.js"></script>
+    <link href="css/feedback.css" rel="stylesheet" type="text/css"/>
+</head>
+    
+<body>
+<div id="mainContainer" data-feedbackType="General" class="hide"></div>
+<div id="loading">
+    <img src="images/loadingAnimation.gif"/>
+</div>
+    
+<script type="text/javascript">
+    function callJSOnload() {
+        UserVoice=window.UserVoice||[];
+        
+        var element = document.createElement("script");
+        element.src = "js/feedbackMain.js";
+        document.body.appendChild(element);
+    }
+    
+    if (window.addEventListener)
+        window.addEventListener("load", callJSOnload, false);
+    else 
+        window.onload = callJSOnload;
+</script>
+</body>
+</html>
