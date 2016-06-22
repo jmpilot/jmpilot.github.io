@@ -40,11 +40,72 @@ UserVoice.push(['identify', {
 // Add default trigger to the bottom-right corner of the window:
 UserVoice.push(['addTrigger', {mode: 'contact', trigger_position: 'bottom-right' }]);
 
-// Or, use your own custom trigger:
-//UserVoice.push(['addTrigger', '#id', { mode: 'contact' }]);
 
-// Autoprompt for Satisfaction and SmartVote (only displayed under certain conditions)
-UserVoice.push(['autoprompt', {}]);
+UserVoice.push(['set', {
+  strings: {
+    //
+    // Pro-tip: only send the ones you want to override
+    //
+    // Menu items
+    contact_menu_label: 'a',
+    smartvote_menu_label: 'b',
+    // Contact form
+    contact_title: 'c',
+    contact_message_placeholder: 'd',
+    contact_skip_instant_answers_button: 'e',
+    contact_details_title: 'f',
+    contact_submit_button: 'g',
+    contact_success_title: 'h',
+    contact_success_body: 'i',
+    // SmartVote
+    smartvote_title: 'j',
+    post_suggestion_menu_label: 'k',
+    smartvote_pick_button: 'l',
+    smartvote_subscribe_button: 'm',
+    suggestion_subscribe_title: 'n',
+    suggestion_subscribe_body: 'o',
+    suggestion_subscribed_body: 'o',
+    smartvote_success_title: 'q',
+    // Posting a suggestion
+    post_suggestion_title: 'Pea',
+    post_suggestion_body: 'Whe comments.',
+    post_suggestion_message_placeholder: 'Deur idea',
+    post_suggestion_skip_instant_answers_button: 'Skt idea',
+    post_suggestion_details_title: 'Adils',
+    suggestion_title_label: 'Idetle',
+    suggestion_title_placeholder: 'Summgestion',
+    suggestion_category_label: 'Cary',
+    post_suggestion_submit_button: 'P',
+    post_suggestion_success_title: 'Thou!',
+    post_suggestion_success_body: 'Yo.',
+    // Satisfaction
+    satisfaction_message_title: 'core?',
+    satisfaction_message_placeholder: 'feedback',
+    satisfaction_success_title: 'Thu!',
+    satisfaction_success_body: 'Wrt.',
+    // Instant Answers
+    instant_answers_title: 'Al?',
+    instant_answers_related_articles_label: 'Reicles',
+    instant_answers_related_suggestions_label: 'Releas',
+    article_pick_button: 'Thn',
+    suggestion_subscribe_button: 's!',
+    contact_confirm_title: 'Aw!!',
+    contact_confirm_body: 'Do yous a message?',
+    post_suggestion_confirm_title: 'Oy.',
+    post_suggestion_confirm_body: 'Do y submit an idea?',
+    instant_answers_success_title: 'Thyou!',
+    instant_answers_success_body: 'We ta heart.',
+    // Misc 
+    email_address_label: 'Youraddress',
+    email_address_placeholder: 'Emdress'
+  }
+}]);
+
+UserVoice.push(['show', {
+  mode: 'contact' // contact, smartvote, satisfaction
+}]);
+
+
 </script>
 </head>
     
