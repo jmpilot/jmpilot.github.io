@@ -39,15 +39,73 @@ UserVoice.push(['identify', {
   //  plan:         'Enhanced' // Plan name for the account
   //}
 }]);
+UserVoice.push(['set', {
+  strings: {
+    //
+    // Pro-tip: only send the ones you want to override
+    //
+    // Menu items
+    contact_menu_label: 'Send us a message',
+    smartvote_menu_label: 'Help us decide what to add next',
+    // Contact form
+    contact_title: 'Send us a message',
+    contact_message_placeholder: 'Give feedback or ask for help',
+    contact_skip_instant_answers_button: 'Skip and send message',
+    contact_details_title: 'Additional details',
+    contact_submit_button: 'Send message',
+    contact_success_title: 'Message sent!',
+    contact_success_body: 'We’ll be in touch.',
+    // SmartVote
+    smartvote_title: 'What should we add next?',
+    post_suggestion_menu_label: 'Post your own idea',
+    smartvote_pick_button: 'Pick',
+    smartvote_subscribe_button: 'Pick + Subscribe',
+    suggestion_subscribe_title: 'Great stuff!',
+    suggestion_subscribe_body: 'Do you want updates about this idea?',
+    suggestion_subscribed_body: 'We’ll update you as this idea progresses.',
+    smartvote_success_title: 'Your pick',
+    // Posting a suggestion
+    post_suggestion_title: 'Post an idea',
+    post_suggestion_body: 'When you post an idea to our feedback forum, others will be able to subscribe to it and make comments.',
+    post_suggestion_message_placeholder: 'Describe your idea',
+    post_suggestion_skip_instant_answers_button: 'Skip and post idea',
+    post_suggestion_details_title: 'Additional details',
+    suggestion_title_label: 'Idea title',
+    suggestion_title_placeholder: 'Summarize your suggestion',
+    suggestion_category_label: 'Category',
+    post_suggestion_submit_button: 'Post idea',
+    post_suggestion_success_title: 'Thank you!',
+    post_suggestion_success_body: 'Your feedback has been posted to our %{link:feedback forum}.',
+    // Satisfaction
+    satisfaction_message_title: 'Why did you pick that score?',
+    satisfaction_message_placeholder: 'Enter your feedback',
+    satisfaction_success_title: 'Thank you!',
+    satisfaction_success_body: 'We take your feedback to heart.',
+    // Instant Answers
+    instant_answers_title: 'Are any of these helpful?',
+    instant_answers_related_articles_label: 'Related articles',
+    instant_answers_related_suggestions_label: 'Related ideas',
+    article_pick_button: 'This answers my question',
+    suggestion_subscribe_button: 'I want this!',
+    contact_confirm_title: 'Awesome!!!',
+    contact_confirm_body: 'Do you still want to send us a message?',
+    post_suggestion_confirm_title: 'Okay.',
+    post_suggestion_confirm_body: 'Do you still want to submit an idea?',
+    instant_answers_success_title: 'Thank you!',
+    instant_answers_success_body: 'We take your feedback to heart.',
+    // Misc 
+    email_address_label: 'Your email address',
+    email_address_placeholder: 'Email address'
+  }
+}]);
+
+UserVoice.push(['show', {
+  mode: 'contact' // contact, smartvote, satisfaction
+}]);
 
 // Add default trigger to the bottom-right corner of the window:
 UserVoice.push(['addTrigger', {mode: 'post_suggestion', trigger_position: 'bottom-right' }]);
 
-// Or, use your own custom trigger:
-//UserVoice.push(['addTrigger', '#id', { mode: 'contact' }]);
-
-// Autoprompt for Satisfaction and SmartVote (only displayed under certain conditions)
-UserVoice.push(['autoprompt', {}]);
 </script>
 
 </body>
