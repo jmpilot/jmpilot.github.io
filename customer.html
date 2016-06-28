@@ -1,118 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Copyright 2016 Adobe Systems Incorporated.  All rights reserved. -->
-    <title>User Feedback</title>
-    <script>
-// Include the UserVoice JavaScript SDK (only needed once on a page)
-UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='http://widget.uservoice.com/xxoKrGd3Cq4dkM0uZnmaA.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
-
-//
-// UserVoice Javascript SDK developer documentation:
-// https://www.uservoice.com/o/javascript-sdk
-//
-
-// Set colors
-UserVoice.push(['set', {
-  accent_color: '#448dd6',
-  trigger_color: 'white',
-  trigger_background_color: 'rgba(46, 49, 51, 0.6)'
-}]);
-
-// Identify the user and pass traits
-// To enable, replace sample data with actual user traits and uncomment the line
-UserVoice.push(['identify', {
-  //email:      'john.doe@example.com', // User’s email address
-  //name:       'John Doe', // User’s real name
-  //created_at: 1364406966, // Unix timestamp for the date the user signed up
-  //id:         123, // Optional: Unique id of the user (if set, this should not change)
-  //type:       'Owner', // Optional: segment your users by type
-  //account: {
-  //  id:           123, // Optional: associate multiple users with a single account
-  //  name:         'Acme, Co.', // Account name
-  //  created_at:   1364406966, // Unix timestamp for the date the account was created
-  //  monthly_rate: 9.99, // Decimal; monthly rate of the account
-  //  ltv:          1495.00, // Decimal; lifetime value of the account
-  //  plan:         'Enhanced' // Plan name for the account
-  //}
-}]);
-
-// Add default trigger to the bottom-right corner of the window:
-UserVoice.push(['addTrigger', {mode: 'contact', trigger_position: 'bottom-right' }]);
-
-
-UserVoice.push(['set', {
-  strings: {
-    //
-    // Pro-tip: only send the ones you want to override
-    //
-    // Menu items
-    contact_menu_label: 'a',
-    smartvote_menu_label: 'b',
-    // Contact form
-    contact_title: 'c',
-    contact_message_placeholder: 'd',
-    contact_skip_instant_answers_button: 'e',
-    contact_details_title: 'f',
-    contact_submit_button: 'g',
-    contact_success_title: 'h',
-    contact_success_body: 'i',
-    // SmartVote
-    smartvote_title: 'j',
-    post_suggestion_menu_label: 'k',
-    smartvote_pick_button: 'l',
-    smartvote_subscribe_button: 'm',
-    suggestion_subscribe_title: 'n',
-    suggestion_subscribe_body: 'o',
-    suggestion_subscribed_body: 'o',
-    smartvote_success_title: 'q',
-    // Posting a suggestion
-    post_suggestion_title: 'Pea',
-    post_suggestion_body: 'Whe comments.',
-    post_suggestion_message_placeholder: 'Deur idea',
-    post_suggestion_skip_instant_answers_button: 'Skt idea',
-    post_suggestion_details_title: 'Adils',
-    suggestion_title_label: 'Idetle',
-    suggestion_title_placeholder: 'Summgestion',
-    suggestion_category_label: 'Cary',
-    post_suggestion_submit_button: 'P',
-    post_suggestion_success_title: 'Thou!',
-    post_suggestion_success_body: 'Yo.',
-    // Satisfaction
-    satisfaction_message_title: 'core?',
-    satisfaction_message_placeholder: 'feedback',
-    satisfaction_success_title: 'Thu!',
-    satisfaction_success_body: 'Wrt.',
-    // Instant Answers
-    instant_answers_title: 'Al?',
-    instant_answers_related_articles_label: 'Reicles',
-    instant_answers_related_suggestions_label: 'Releas',
-    article_pick_button: 'Thn',
-    suggestion_subscribe_button: 's!',
-    contact_confirm_title: 'Aw!!',
-    contact_confirm_body: 'Do yous a message?',
-    post_suggestion_confirm_title: 'Oy.',
-    post_suggestion_confirm_body: 'Do y submit an idea?',
-    instant_answers_success_title: 'Thyou!',
-    instant_answers_success_body: 'We ta heart.',
-    // Misc 
-    email_address_label: 'Youraddress',
-    email_address_placeholder: 'Emdress'
-  }
-}]);
-
-UserVoice.push(['show', {
-  mode: 'contact' // contact, smartvote, satisfaction
-}]);
-
-
-</script>
-</head>
+    
     
 <body>
-<div id="mainContainer" data-feedbackType="General" style="height: 230px; width: 250px;"></div>
+
     
 
+<!-- UserVoice JavaScript SDK (only needed once on a page) -->
+<script>(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/hylw0tKOIkXPFyUII1zoQ.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})()</script>
 
+<!-- The Classic Widget will be embeded wherever this div is placed -->
+<div data-uv-inline="classic_widget" data-uv-mode="full" data-uv-primary-color="#cc6d00" data-uv-link-color="#007dbf" data-uv-default-mode="support" data-uv-forum-id="292566" data-uv-width="100%" data-uv-height="550px"></div>
 </body>
 </html>
