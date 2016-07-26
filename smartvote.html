@@ -17,7 +17,9 @@ UserVoice.push(['set', {
   accent_color: '#448dd6',
   trigger_color: 'white',
   trigger_background_color: 'rgba(46, 49, 51, 0.6)',
-  smartvote_enabled:true
+  smartvote_enabled:true,
+  contact_enabled:true,
+  satisfaction_enabled:true
 }]);
 
 // Identify the user and pass traits
@@ -31,7 +33,7 @@ UserVoice.push(['identify', {
 }]);
 
 // Add default trigger to the bottom-right corner of the window:
-UserVoice.push(['addTrigger', {mode: 'smartvote', trigger_position: 'bottom-right' }]);
+UserVoice.push(['addTrigger', {mode: 'contact', trigger_position: 'bottom-right' }]);
 
 // Or, use your own custom trigger:
 //UserVoice.push(['addTrigger', '#id', { mode: 'smartvote' }]);
