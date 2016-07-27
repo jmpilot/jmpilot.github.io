@@ -22,24 +22,10 @@ UserVoice.push(['set', {
   satisfaction_enabled:true
 }]);
 
-// Identify the user and pass traits
-// To enable, replace sample data with actual user traits and uncomment the line
-UserVoice.push(['identify', {
-  email:      'jmpilot@ncsu.edu', // User’s email address
-  name:       'auto', // User’s real name
-  created_at: 1468238400, // Unix timestamp for the date the user signed up
-
-  //}
-}]);
 
 // Add default trigger to the bottom-right corner of the window:
 UserVoice.push(['addTrigger', {mode: 'smartvote', trigger_position: 'bottom-right' }]);
 
-// Or, use your own custom trigger:
-//UserVoice.push(['addTrigger', '#id', { mode: 'smartvote' }]);
-
-// Autoprompt for Satisfaction and SmartVote (only displayed under certain conditions)
-UserVoice.push(['autoprompt', {}]);
 </script>
 </body>
 </html>
