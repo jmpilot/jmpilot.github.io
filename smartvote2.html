@@ -1,1 +1,34 @@
+<html>
+<head>
+
+</head>
+<body>
+
+<script>
+// Include the UserVoice JavaScript SDK (only needed once on a page)
+UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='https://widget.uservoice.com/hylw0tKOIkXPFyUII1zoQ.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+
+//
+// UserVoice Javascript SDK developer documentation:
+// https://www.uservoice.com/o/javascript-sdk
+//
+
+// Set colors
+UserVoice.push(['set', {
+  accent_color: '#448dd6',
+  trigger_color: 'white',
+  trigger_background_color: 'rgba(46, 49, 51, 0.6)',
+  smartvote_enabled:true,
+  contact_enabled:true,
+  satisfaction_enabled:true,
+  forum_id: '374946'
+}]);
+
+
+// Add default trigger to the bottom-right corner of the window:
+UserVoice.push(['addTrigger', {mode: 'smartvote', trigger_position: 'bottom-right' }]);
+
+</script>
+</body>
+</html>
 
