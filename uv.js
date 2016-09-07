@@ -5,7 +5,7 @@ function help(email, username, hotelname, createtime) {
         var uv = document.createElement('script');
         uv.type = 'text/javascript';
         uv.async = true;
-        uv.src = '//widget.uservoice.com/sat3TAinQEdJskUGgRqYhQ.js';
+        uv.src = '//hylw0tKOIkXPFyUII1zoQ.js';
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(uv, s)
     })();
