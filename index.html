@@ -36,6 +36,8 @@ UserVoice.push(['identify', {
   //  plan:         'Enhanced' // Plan name for the account
   //}
 }]);
+  
+ UserVoice.push(['set', 'ticket_custom_fields', {'helpful': 'Blue'}]);
 
 // Add default trigger to the bottom-right corner of the window:
 UserVoice.push(['addTrigger', {mode: 'satisfaction', trigger_position: 'bottom-right' }]);
