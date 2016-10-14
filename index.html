@@ -32,10 +32,6 @@ UserVoice.push(['identify', {
 
 UserVoice.push(['set', 'ticket_custom_fields', {'referrerURl': 'foobar'}]);
   
-UserVoice.push(['show', {
-  mode: '[satisfaction' // contact, smartvote, satisfaction
-}]);
-
 // Add default trigger to the bottom-right corner of the window:
 UserVoice.push(['addTrigger', {mode: 'satisfaction', trigger_position: 'bottom-right' }]);
 
