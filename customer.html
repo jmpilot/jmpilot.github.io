@@ -3,42 +3,27 @@
 <head>
 <body>
  <script>
-            // Include the UserVoice JavaScript SDK (only needed once on a page)
-            UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/uouQNcbVRYcnPbJP28TMAA.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
-            //
-            // UserVoice Javascript SDK developer documentation:
-            // https://www.uservoice.com/o/javascript-sdk
-            //
+   UserVoice = window.UserVoice || [];
+(function(){var uv=document.createElement('script');
+uv.type='text/javascript';
+uv.async=true;
+uv.src='//widget.uservoice.com/LzmpYJPhh0ulZOF6wrYf6A.js';
+var s=document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(uv,s); })();
+$.getJSON('<c:url value="/rest/userVoice/SSOToken"/>').done(function(data){
 
-            // Set colors
-            UserVoice.push(['set', {
-                accent_color: '#448dd6',
-                trigger_color: 'white',
-                trigger_background_color: '#448dd6'
-            }]);
-            // Identify the user and pass traits
-            // To enable, replace sample data with actual user traits and uncomment the line
-            UserVoice.push(['identify', {
-                email:      'jhopkins@foreup.com', // User’s email address
-                name:       "Tom Lehman", // User’s real name
-                  id:         '106', // Optional: Unique id of the user (if set, this should not change)
-                type:       '3', // Optional: segment your users by type
-                account: {
-                    id:           '9039', // Optional: associate multiple users with a single account
-                    name:         'Bryce Canyon Golf Club' // Account name
-                  }
-            }]);
-
-            // Add default trigger to the bottom-right corner of the window:
-            UserVoice.push(['addTrigger', {
-             mode:'smartvote',
-             trigger_position: 'bottom-right',
-                            }]);
-
-
-            // Autoprompt for Satisfaction and SmartVote (only displayed under certain conditions)
-            UserVoice.push(['autoprompt', {}]);
-        </script>
+  UserVoice.push(['setSSO', data.token]);
+  UserVoice.push(['identify', {email:data.email}]);
+  UserVoice.push(['addTrigger', {
+    mode: 'smartvote', // Modes: contact (default), smartvote, satisfaction
+    trigger_position: 'bottom-left',
+    trigger_color: '#ffffff',
+    trigger_background_color: '#00a7e1',
+    accent_color: '#c3d500'
+  }]);
+});
+  
+ </script>
 
 </body>
   </html>
