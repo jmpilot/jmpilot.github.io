@@ -4,9 +4,9 @@
 </head>
 <body>
   
-<a href="#" data-uv-trigger="contact" data-uv-ticket_fields="{'Support Channel': 'website: other questions'}">Customer Support</a>
+<a href="#" data-uv-trigger="contact" id="other">Customer Support</a>
 
-<a href="#" data-uv-trigger="contact" data-uv-ticket_fields='{"Support Channel": "website: customer support"}'>Other Inquiries</a>
+<a href="#" data-uv-trigger="contact" id="support" data-uv-ticket_custom_fields='{"Support Channel": "website: customer support"}'>Other Inquiries</a>
   
   
 <script>
@@ -18,6 +18,17 @@ UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script
 // https://www.uservoice.com/o/javascript-sdk
 //
 
+  UserVoice.push(['set', 'ticket_custom_fields', {
+  target:'#other',
+  'Support Channel': 'website: other questions'  
+  }]);
+  
+   UserVoice.push(['set', 'ticket_custom_fields', {
+  target:'#contact',
+  'Support Channel': 'website: customer support'  
+  }]);
+
+  
 // Set colors
 UserVoice.push(['set', {
   accent_color: '#448dd6',
