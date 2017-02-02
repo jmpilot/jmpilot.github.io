@@ -6,7 +6,7 @@
   
 <a href="#" id="other">Customer Support</a>
 
-<a href="#" id="support" data-uv-ticket_custom_fields='{"Support Channel": "website: customer support"}'>Other Inquiries</a>
+<a href="#" id="support">Other Inquiries</a>
   
   
 <script>
@@ -18,14 +18,14 @@ UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script
 // https://www.uservoice.com/o/javascript-sdk
 //
 
-  UserVoice.push(['set' {
+  UserVoice.push(['addTrigger' {
   target:'#other',
   contact_enabled: true,
    ticket_custom_fields: {
    'Support Channel': 'website: other questions'    
   }]);
   
- UserVoice.push(['set' {
+ UserVoice.push(['addTrigger' {
   target:'#contact',
   contact_enabled: true,
    ticket_custom_fields: {
