@@ -46,34 +46,6 @@ UserVoice.push(['identify', {
 // Add default trigger to the bottom-right corner of the window:
 UserVoice.push(['addTrigger', {mode: 'contact', trigger_position: 'bottom-right' }]);
 
-// Or, use your own custom trigger:
-//UserVoice.push(['addTrigger', '#id', { mode: 'contact' }]);
-
-// Autoprompt for Satisfaction and SmartVote (only displayed under certain conditions)
-UserVoice.push(['autoprompt', {}]);
-
-//
-// UserVoice Javascript SDK developer documentation:
-// https://www.uservoice.com/o/javascript-sdk
-//
-
-  UserVoice.push(['addTrigger' {
-  target:'#other',
-  contact_enabled: true,
-   ticket_custom_fields: {
-   'Support Channel': 'website: other questions'    
-  }
-  }]);
-  
- UserVoice.push(['addTrigger' {
-  target:'#contact',
-  contact_enabled: true,
-   ticket_custom_fields: {
-   'Support Channel': 'website: customer support'    
-                 }
-  }]);
-  
-
  
 </script>
 </body>
