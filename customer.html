@@ -2,28 +2,54 @@
 <html>
 <head>
 <body>
- <script src="jquery-3.1.1.min.js">
-   UserVoice = window.UserVoice || [];
-(function(){var uv=document.createElement('script');
-uv.type='text/javascript';
-uv.async=true;
-uv.src='//widget.uservoice.com/LzmpYJPhh0ulZOF6wrYf6A.js';
-var s=document.getElementsByTagName('script')[0];
-s.parentNode.insertBefore(uv,s); })();
-$.getJSON('<c:url value="/rest/userVoice/SSOToken"/>').done(function(data){
+ <script type="text/javascript">
+        // Include the UserVoice JavaScript SDK (only needed once on a page)
+          UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/hoQb8HzejVuuFr743Gkw5A.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
 
-  UserVoice.push(['setSSO', data.token]);
-  UserVoice.push(['identify', {email:data.email}]);
-  UserVoice.push(['addTrigger', {
-    mode: 'smartvote', // Modes: contact (default), smartvote, satisfaction
-    trigger_position: 'bottom-left',
-    trigger_color: '#ffffff',
-    trigger_background_color: '#00a7e1',
-    accent_color: '#c3d500'
-  }]);
-});
-  
- </script>
+                //
+                // UserVoice Javascript SDK developer documentation:
+                // https://www.uservoice.com/o/javascript-sdk
+                //
 
+                //Identify the user and pass traits
+                //To enable, replace sample data with actual user traits and uncomment the line
+                UserVoice.push(['identify', {
+                    email:"john.rix@uservoice.com", // User’s email address
+                    name:"John R", // User’s real name
+                    created_at:1493337600, // Unix timestamp for the date the user signed up
+                    id:166579, // Optional: Unique id of the user (if set, this should not change)
+                    type:"Owner", // Optional: segment your users by type
+                    account: {
+                     id:166579, // Optional: associate multiple users with a single account
+                     name:"John R", // Account name
+                     created_at:1493337600, // Unix timestamp for the date the account was created
+                     plan:"Legacy Free", // Plan name for the account
+                    }
+                }]);
+
+
+
+               // Set global widget options
+               UserVoice.push(['set', {
+                 accent_color: '#f43010',
+                 trigger_color: 'white',
+                 trigger_background_color: '#f43010',
+                 target:false,
+               }]);
+        
+               // Add default trigger to the bottom-right corner of the window:
+               UserVoice.push(['addTrigger', {
+                 mode: 'contact',
+                 trigger_color: 'white',
+                 trigger_background_color: '#f1240c',
+                 trigger_position: 'bottom-right'
+               }]);
+
+                //Or, use your own custom trigger:
+                UserVoice.push(['addTrigger', '#contact_us', { mode: 'contact' }]);
+
+                //Autoprompt for Satisfaction and SmartVote (only displayed under certain conditions)
+                UserVoice.push(['autoprompt', {}]);
+        </script>
 </body>
   </html>
