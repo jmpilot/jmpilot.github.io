@@ -4,52 +4,34 @@
 </head>
 <body>
     
+<script type="44c3ea79f063595c095797aa-">
+// Include the UserVoice JavaScript SDK (only needed once on a page)
+UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/sWtFPr2lpg4DJJf9vbdmsA.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+
+//
+// UserVoice Javascript SDK developer documentation:
+// https://www.uservoice.com/o/javascript-sdk
+//
+
+// Set colors
+UserVoice.push(['set', {
+  accent_color: '#448dd6',
+  trigger_color: 'white',
+  trigger_background_color: 'rgba(46, 49, 51, 0.6)'
+}]);
 
 
+// Add default trigger to the bottom-right corner of the window:
+UserVoice.push(['addTrigger', {mode: 'contact', trigger_position: 'bottom-right' }]);
 
-    <script>
-    
+// Or, use your own custom trigger:
+//UserVoice.push(['addTrigger', '#id', { mode: 'contact' }]);
 
-            
-            UserVoice = window.UserVoice || []; (function () { var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true; uv.src = '//widget.uservoice.com/mPHCxzg2nGlhrzpL061aQ.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s) })();
+// Autoprompt for NPS® Rating and SmartVote (only displayed under certain conditions)
+UserVoice.push(['autoprompt', {}]);
+</script>
 
-            
-
-            
-            UserVoice.push(['set', {
-                accent_color: '#4680bf',
-                trigger_color: 'white',
-                trigger_background_color: '#f5863b',
-                menu_enabled: true,
-                contact_enabled: true,
-                smartvote_enabled: false,
-                post_suggestion_enabled: false
-                
-            }]);
-
-            
-            UserVoice.push(['identify', {
-                    email:         "2_55ebd89541ff419a1d2cb3e4a48d862a3961a3be33a77a0014da26bbd55921cf@mixer.com",               
-                                name:          "over_limit",                
-                                created_at: 1329181128,           
-                                id:            2047463,                  
-                                type:          "2Tester",                
-                                account: { 
-                        id: 101,           
-                        name:        "Test Account",        
-                        created_at: 1325376000,           
-                        monthly_rate: 98, 
-                        plan: "Test"                
-                    } 
-            }]);
-
-            UserVoice.push(['addTrigger', { mode: 'contact', trigger_position: 'bottom-right' }]);
-
-            UserVoice.push(['autoprompt', {}]);
-        
-        
-    </script>
-
+  <div id="id">support</div>
 </body>
 
 </html>
