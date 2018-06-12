@@ -6,7 +6,7 @@
     
 <script>
 // Include the UserVoice JavaScript SDK (only needed once on a page)
-UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/SWjx2Q9c9BXZWaUgrNsg.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/mPHCxzg2nGlhrzpL061aQ.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
 
 //
 // UserVoice Javascript SDK developer documentation:
@@ -42,12 +42,11 @@ UserVoice.push(['identify', {
 UserVoice.push(['addTrigger', {mode: 'feedback', trigger_position: 'bottom-right' }]);
 
 // Or, use your own custom trigger:
-//UserVoice.push(['addTrigger', '#id', { mode: 'satisfaction' }]);
+//UserVoice.push(['addTrigger', '#id', { mode: 'feedback' }]);
 
 // Autoprompt for NPS® Rating and SmartVote (only displayed under certain conditions)
 UserVoice.push(['autoprompt', {}]);
 </script>
-  
 </body>
 
 </html>
