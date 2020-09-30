@@ -17,14 +17,15 @@ UserVoice.push(['set', {
   accent_color: '#448dd6',
   trigger_color: 'white',
   trigger_background_color: 'rgba(46, 49, 51, 0.6)',
-  lang: 'en'
+  lang: 'en',
+  contact_enabled: false
 }]);
 
 // Identify the user and pass traits
 
 
 // Add default trigger to the bottom-right corner of the window:
-UserVoice.push(['addTrigger', {mode: 'post_suggestion', trigger_position: 'bottom-right', locale:'en', contact_enabled:False }]);
+UserVoice.push(['addTrigger', {mode: 'post_suggestion', trigger_position: 'bottom-right', locale:'en'}]);
 
 // Or, use your own custom trigger:
 //UserVoice.push(['addTrigger', '#id', { mode: 'contact' }]);
