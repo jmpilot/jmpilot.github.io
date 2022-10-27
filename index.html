@@ -3,6 +3,7 @@
   <title>stuff & things</title>
 </head>
 <body>
+  <div id="widget"></div>
 <script>
 // Include the UserVoice JavaScript SDK (only needed once on a page)
 UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/mPHCxzg2nGlhrzpL061aQ.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
@@ -30,10 +31,10 @@ UserVoice.push(['set', {sso: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6I
 
 
 // Add default trigger to the bottom-right corner of the window:
-UserVoice.push(['embed', {mode: 'post_idea'}]);
+
 
 // Or, use your own custom trigger:
-//UserVoice.push(['addTrigger', '#id', { mode: 'contact' }]);
+UserVoice.push(['embed', '#widget', { mode: 'post_idea' }]);
 
 // Autoprompt for NPS® Rating and SmartVote (only displayed under certain conditions)
 UserVoice.push(['autoprompt', {}]);
