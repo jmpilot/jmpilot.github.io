@@ -19,25 +19,16 @@ UserVoice.push(['set', {
   trigger_color: 'white',
   trigger_background_color: 'rgba(46, 49, 51, 0.6)',
   locale: 'pt_br',
-  contact_enabled: true,
+  contact_enabled: false,
   screenshot_enabled: false,
-  forum_id: 589666,
-  category_id: 417414
+
 }]);
 
 // Identify the user and pass traits
-
+UserVoice.push(['addTrigger', {mode: 'contact', trigger_position: 'bottom-right' }]);
 UserVoice.push(['set', {sso: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InRlc3RAdXNlci5uZXQiLCJndWlkIjoidGVzdEB1c2VyLm5ldCJ9.sSEg8-SFNht8kDJ4MmK6sbyZXaIOpc1VOUunWgi1Zcg"}]);
 
 
-// Add default trigger to the bottom-right corner of the window:
-
-
-// Or, use your own custom trigger:
-UserVoice.push(['embed', '#widget', { mode: 'post_idea', height: '325px', width: '50%' }]);
-
-// Autoprompt for NPS® Rating and SmartVote (only displayed under certain conditions)
-UserVoice.push(['autoprompt', {}]);
 </script>
   
 </body>
